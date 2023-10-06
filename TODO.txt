@@ -1,0 +1,27 @@
+18/7  july 23 
+
+live validation 
+    -createLive + check if user is the insturtor or admin  'done'
+    -updateLive  'done' 
+
+live services   
+    -get Live by day month year 
+
+Mostafa edits    
+    populate courses with packages 'done'-> 7mos
+    create filter object on courses  on lives   'done'
+
+19/7 july 23
+-package image  'done'
+
+
+
+
+-validation and rules on all routes
+-landing page  video
+
+
+
+-what to edit in final project 
+1-rate limit 
+2-login from 2 devices
