@@ -5,7 +5,7 @@ const passport = require("passport");
 //middleware
 const morgan = require("morgan");
 //env file
-const cors = require("cors");
+// const cors = require("cors");
 const compression = require("compression");
 
 

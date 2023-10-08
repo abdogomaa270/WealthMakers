@@ -67,7 +67,7 @@ router
 
 router
   .route("/addUserToPlan")
-  .post(authServices.protect, authServices.allowedTo("admin"), addUserToPlan);
+  .post(authServices.protect, authServices.allowedTo("admin","user"), addUserToPlan);
 router
   .route("/removeUserFromPlan")
   .post(authServices.protect, authServices.allowedTo("admin"), removeUserFromPlan);

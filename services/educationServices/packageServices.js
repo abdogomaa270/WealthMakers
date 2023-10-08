@@ -98,6 +98,7 @@ exports.addUserToPlan = asyncHandler(async (req, res) => {
   if (!user) {
     res.status(400).json({ status:`faild`, msg:`no user for that email: ${userEmail}` });
   }
+  console.log(plan.expirationTime)
   const startDate = new Date();
   const endDate = new Date(startDate);
   endDate.setDate(endDate.getDate() + plan.expirationTime);

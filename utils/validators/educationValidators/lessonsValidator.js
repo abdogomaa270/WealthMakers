@@ -67,10 +67,12 @@ exports.checkAuthority2 = [
     .custom(
       (courseId, { req }) =>
         new Promise((resolve, reject) => {
+          console.log(req.user.role)
           //if he is an admin 
           if(req.user.role==="admin"){
             resolve();
           }
+
           // Check if the user has a subscription for the course
           Package.findOne({
             $or: [
@@ -85,7 +87,10 @@ exports.checkAuthority2 = [
           }
           )
             .then((package) => {
+              console.log(package)
               if (package) {
+                console.log("package")
+
                 // check whether user subscribtion expired or not 
                 const user = package.users[0];
                 const bool =
@@ -100,7 +105,9 @@ exports.checkAuthority2 = [
                     });
                 
                   }
+                  else{ 
                   resolve();
+                  }
               } else {
                 // Check if the user has paid for the course or is the instructor
                 Course.findOne({
